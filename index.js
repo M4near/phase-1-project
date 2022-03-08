@@ -28,7 +28,7 @@ const detailsCard = (name, button) => {
   };
   };
   
-  let detailsUpdate = detailsCard("Ross Nicholls", "Update Status");
+  let detailsUpdate = detailsCard("Bob's Burger", "Update Status");
   
   document.querySelector("aside.card").innerHTML = detailsUpdate.showDetails();
   
@@ -127,3 +127,6 @@ const detailsCard = (name, button) => {
     //erases placeholder text in textarea
       document.getElementById("inputStatus").value = "";
   };
+
+
+  
