@@ -1,3 +1,76 @@
+// See a random mountain displayed in the #mountain-details div when the page loads. A user will see the mountain's image, name, location and number of likes.
+
+//create a fetch request to GET mountain data
+//create funciton that provides random mountain data for mountain-details div
+//Replace img ID and src in mountain-details div so that they grab a random image with its affiliated name, location, and number of likes
+
+fetch('https://bobsburgers-api.herokuapp.com/characters/[47,58,168,277,272,473]')
+.then(resp => resp.json())
+.then(bobsData => renderRandomCharacter(bobsData))
+
+function renderRandomCharacter(bobsData){
+    let characterDetails = document.querySelector('#character-details')
+    let random = Math.floor((Math.random() * bobsData.length-1) + 1);
+    
+    let details = bobsData[random]
+
+    let characterName = document.querySelector('#character-name')
+    characterName.innerText = details.name
+    let characterVoiceActor = document.querySelector('#character-VoiceActor')
+    characterVoiceActor.innerText = details.voicedBy
+    let characterLikes = document.querySelector('#character-likes')
+    characterLikes.innerText = details.likes
+    let characterImage = document.querySelector('#character-image')
+    characterImage.src = details.image
+    console.log(characterImage.src)
+ 
+}
+
+
+// See a list of all mountain names at the bottom of the page in the #mountains-list ul when the page loads. A user should be able to click on a mountain in the list, and display the information for that mountain in the #mountain-details div.
+
+//possibly create another fetch request for mountain data
+//insert moutain names in mountains-list UL
+//create click events for names so that when  user clicks on name, infomration from that clicked mountain reflects in mountain-details div
+
+
+fetch('https://bobsburgers-api.herokuapp.com/characters/[47,58,168,277,272,473]')
+.then(resp => resp.json())
+.then(bobsData => renderCharacterList(bobsData))
+
+function renderCharacterList(bobsData){
+    let characterList = document.querySelector('#character-list')
+
+    for(let characterObj of bobsData){
+        let characterListName = document.createElement('li')
+        characterListName.innerText = characterObj.name
+        characterListName.addEventListener('click', function(e){
+            let newArr = [characterObj]
+            renderRandomCharacter(newArr)
+            
+        })
+        characterList.appendChild(characterListName)
+    }
+
+}
+
+
+// A user should be able to click on the like button and the number that is displayed on the button should increment by 1. This number of likes does not need to persist upon page refresh.
+
+//create a click event for the like button
+//have event increment displayed number by 1 for each time it is clicked
+
+let likeButton = document.querySelector('#like-button')
+let mountainLikes = document.querySelector('#mountain-likes')
+
+likeButton.addEventListener('click', function(e){
+    mountainLikes.innerText = parseInt(mountainLikes.innerText) +1
+    console.log(mountainLikes.innerText)
+})
+
+
+
+
 // Comment Section
 //card
 const detailsCard = (name, button) => {
