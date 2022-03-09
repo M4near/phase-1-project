@@ -1,58 +1,55 @@
 
-      <!-- PLACE CONTENT HERE -->
-      <!DOCTYPE html>
-      <html lang="en">
-        <head>
-          <meta charset="UTF-8" />
-          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <script defer src="index.js"></script>
-          <!-- <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css" /> -->
-          <link rel="stylesheet" href="/style.css" media="screen">
-          <title>Phase 1 Project</title>
-        </head>
-        <body>
-          <header>
-            <h2><a href="https://fontmeme.com/fonts/bob-s-burgers-font/"><img src="https://fontmeme.com/permalink/220308/f64f5cf785822fa6502750893894bbea.png" alt="bob-s-burgers-font" border="0"></a></h2>
-            <h3><a href="https://fontmeme.com/fonts/bob-s-burgers-font/"><img src="https://fontmeme.com/permalink/220308/1b819ccc1b2ead0c67cf7ad6f4c8aa22.png" alt="bob-s-burgers-font" border="0"></a></h3>
-          </header>
-          <form id="new-character" style="display: none">
-            <label>Name:</label>
-            <input type="text" name="name" id="name" /> <br />
-            <label>Location:</label>
-            <input type="text" name="location" id="location" /> <br />
-            <label>Image Url:</label>
-            <input type="text" name="image" id="image" /> <br />
-            <input type="submit" value="Create Character" />
-          </form>
-          <div id="character-details">
-            <img
-              id="character-image"
-              src="https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640"
-              width="330"
-            />
-      
-            <h5 id="character-name">Character Name</h5>
-            <p id="character-VoiceActor">character voiced by</p>
-            <button id="like-button">
-              <span id="character-likes">0</span>
-              ❤️
-            </button>
-          </div>
-          <div>
-            <h4>Characters</h4>
-             <ul class="bob">
-            <ul id="character-list">
-               
-              <!-- Character Names go here -->
-            </ul>
-        </ul>
-          </div>
-          <section id="wrapper">
-            <aside class="card">
-            </aside>
-            </section>
-        </body>
-      </html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="/style.css"/>
+    <title>Phase 1 Project</title>
+  </head>
+  <body>
+    <header>
+      <h2><a href="https://fontmeme.com/fonts/bob-s-burgers-font/"><img src="https://fontmeme.com/permalink/220308/f64f5cf785822fa6502750893894bbea.png" alt="bob-s-burgers-font" border="0"></a></h2>
+      <h3><a href="https://fontmeme.com/fonts/bob-s-burgers-font/"><img src="https://fontmeme.com/permalink/220308/1b819ccc1b2ead0c67cf7ad6f4c8aa22.png" alt="bob-s-burgers-font" border="0"></a></h3>
+    </header>
+    <form id="new-character" style="display: none">
+      <label>Name:</label>
+      <input type="text" name="name" id="name" /> <br />
+      <label>Location:</label>
+      <input type="text" name="location" id="location" /> <br />
+      <label>Image Url:</label>
+      <input type="text" name="image" id="image" /> <br />
+      <input type="submit" value="Create Character" />
+    </form>
+    <div id="character-details">
+      <img
+        id="characterImage"
+        src="https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640"
+        width="330"
+      />
 
-      
+      <h5 id="characterName">Character Name</h5>
+      <p id="characterAge">character age</p>
+      <p id="characterVoiceActor">character voiced by</p>
+      <p id="characterFirstEpisode">First episode character appeared in</p>
+      <form id="button">
+      <button id="likeButton">
+        <span id="characterLike">♡</span>
+      </form>
+      </button>
+    </div>
+    <div>
+      <h4>Characters</h4>
+      <ul id="character-list">
+        <!-- Character Names go here -->
+      </ul>
+    </div>
+    <!-- Comment Section -->
+    <section id="wrapper">
+      <aside class="card">
+      </aside>
+      </section>
+  </body>
+</html>
