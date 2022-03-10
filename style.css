@@ -1,21 +1,19 @@
-/* Page Center */      
-        
-        body {
-         margin: 0;
-         padding: 0;
-         padding-top:0px;
-          text-align: center; 
-        }
+header  {
+  background-color:#fcdd60;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  top: 0px;
+  position: absolute;
+}
 
-        header  {background-color:#fcdd60;
-                  margin: 0;
-                  padding: 0;
-                 
-                    position: sticky; /*(recomended)*/
-                      top: 0px;
-                      position: fixed;
-                  
-        }
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 250px;
+   text-align: center; 
+ }
+
 
 
 
@@ -26,5 +24,4 @@ ul {text-align: center;
   margin-right:  auto;
   padding: 0;    
 }
-
 
