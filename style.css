@@ -1,23 +1,44 @@
-/* Page Center */      
-        
-        body {
-         margin: 0;
-         padding: 0;
-         padding-top:0px;
-          text-align: center; 
-        }
+header  {
+  background-color:#fcdd60;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  top: 0px;
+  position: absolute;
+  text-align: center;
+}
 
-        header  {background-color:#fcdd60;
-                  margin: 0;
-                  padding: 0;
-                 
-                    position: sticky; /*(recomended)*/
-                      top: 0px;
-                      position: fixed;
-                  
-        }
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 250px;
+  text-align: center; 
+  background-image:url("http://assets.votenow.tv/projects/bob/bg/Bobs-Burgers-Interior.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size:cover;
+  
+ }
+
+#characterName {
+  font-size: 30px;
+  text-decoration: underline;
+}
+
+#characterAge, #characterVoiceActor, #characterFirstEpisode {
+  font-size: 20px;
+}
 
 
+
+#character-details {
+  max-width: 50%;
+  margin: 200 px auto;
+  padding: 100px;
+  padding-left: 15%;
+  float: left;
+}
 
 /* List Items */
 ul {text-align: center;
@@ -25,6 +46,43 @@ ul {text-align: center;
   margin-left:  auto;
   margin-right:  auto;
   padding: 0;    
+  max-width: 50%;
+  font-size: 30px;
+}
+
+li {
+  padding-top: 15px;
+}
+
+li:hover {
+  background-color: #fcdd60;
+}
+
+#characters {
+  float: right;
+  padding-top: 0%;
+  padding-right: 0%;
+  /* color: #f0262a; */
+}
+
+.characters {
+  font-size: 35px;
+  text-decoration: underline;
 }
 
 
+#comments {
+  clear:both;
+}
+
+
+
+#comment-box, #post {
+  border: solid;
+  border-radius: 5px;
+  border-width: auto;
+  border-color: #fcdd60;
+  width: 21%;
+  block-size: fit-content;
+  box-sizing: border-box;
+}
