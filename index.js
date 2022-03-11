@@ -44,12 +44,24 @@ let likeButton = document.querySelector('#likeButton')
 let characterLikes = document.querySelector('#likes')
 
 likeButton.addEventListener('click', function(e){
+    e.preventDefault();
   characterLikes.innerText = parseInt(characterLikes.innerText) +1
   console.log(characterLikes.innerText)
 })
 
 
+const form = document.querySelector('form');
+const comment= document.getElementById("comment");
+comment.addEventListener("click", function(e){
+    e.preventDefault();
+    let commentBoxValue= document.getElementById("comment-box").value;
+ 
+    let li = document.createElement("li");
+    let text = document.createTextNode(`A Bob's Burger fan says: "${commentBoxValue}"`);
+    li.appendChild(text);
+    document.getElementById("unordered").appendChild(li);
+ 
+});
 
-  
 
 
